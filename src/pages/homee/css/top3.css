@@ -1,0 +1,18 @@
+.itemss{
+    padding: 10%;
+    /* height: 600x; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemss>div{
+    width:100px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+}
+
+.itemss>div>p{
+    color: black;
+}
