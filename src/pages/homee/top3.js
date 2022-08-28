@@ -58,16 +58,16 @@ export default function top3() {
       </h1>
       <img
         src={pool}
-        style={{ width: "100%", paddingLeft: "20%", paddingRight: "20%" }}/>
-      <h3 style={{ paddingLeft: "%", color: "black", paddingRight: "20%" }}>
+        style={{width:'100%', paddingLeft: "20%", paddingRight: "20%" }}/>
+      <h3 style={{ }}>
         The Best Vacation Books You Will Read
       </h3>
       <br/>
-      <div className="itemss" >
+      <div className="items" >
         {items.map((i)=>{
             return(
                 <div key={i.key}>
-                    <img src={i.img} className='top3item-img'  />     
+                    <img src={i.img} className='top3item-img'   />     
                     <p><b>{i.text}</b></p>
                 </div>
 

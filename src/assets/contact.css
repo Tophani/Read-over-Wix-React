@@ -1,0 +1,82 @@
+.cform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.cform>.cformsDiv{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.cform>.cformsDiv>label{
+    font-weight: bold;
+    font-size: x-large;
+    color: grey;
+}
+
+
+.cform>.cformsDiv>input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: solid grey 2px;
+}
+
+.namess{
+    width:50%;
+    display: flex;
+    justify-content: space-between;
+}
+.namess-div{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+
+.namess-div>label{
+    font-weight: bold;
+    font-size: x-large;
+    color: grey;
+}
+.namess-div>input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: solid grey 2px;
+}
+
+.cformsDiv>textarea{
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-bottom: solid grey 2px;
+
+}
+.cform>button{
+    background-color: #524A35;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    width: 160px;
+    margin: 20px;
+    border: none;
+}
+
+@media screen and (max-width:580px) {
+    .qq1{
+        padding: 0%;
+        
+        /* background-color: red; */
+    }
+    .cform>.cformsDiv{
+        width: 90%;
+    }
+    .namess{
+        flex-direction: column;
+        width: 90%;
+    }
+    .namess-div{
+        width: 100%;
+    }
+}

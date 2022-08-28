@@ -1,8 +1,24 @@
-import React from "react";
+import React,{useState} from "react";
 import {Outlet,Link} from 'react-router-dom'
-
+import RightNav from './rightnav'
 
 function Navbar() {
+  const [SideNav,sideSwitch]= useState('')
+  function navBTN() {
+    if(SideNav==''){
+      sideSwitch(()=><div style={{position:'absolute',zIndex:5, width:'100%',display:'flex',flexDirection:'column',alignItems:'flex-end' }}>
+      <div style={{display:'flex', width:'50%', justifyContent:'flex-start', backgroundColor:'#F7EAE4', }}>
+        <button onClick={()=>{sideSwitch('')}} style={{width:'10%', backgroundColor:'transparent',border:'none'}}>x</button>
+      </div>
+      <RightNav />
+    </div>)
+      // return()
+    }else{
+      sideSwitch('')
+    }
+  }
+  
+
   return (
     <div
       style={{
@@ -13,9 +29,11 @@ function Navbar() {
         alignItems: "center",
         paddingLeft:30,
         paddingRight:30,
-
+        width:'100%'
       }}
-    >
+    > 
+      
+      
       <div style={{display:"flex",flexDirection:"row",width:"15%", justifyContent:'space-between'}}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +85,7 @@ function Navbar() {
         
         <h2 className="fs-5">BookReview</h2>
       </div>
-      <button style={{ border: "none", backgroundColor: "transparent",width:'10%' }}>
+      <button onClick={navBTN} style={{ border: "none", backgroundColor: "transparent",width:'10%' }}>
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="20" height="20"
 viewBox="0 0 172 172"
@@ -75,6 +93,8 @@ style={{fill:'#000000'}}
 ><g fill="none" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{mixBlendMode:'normal'}} ><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M0,25.8v17.2h172v-17.2zM0,77.4v17.2h172v-17.2zM0,129v17.2h172v-17.2z"></path></g></g></svg>
         
       </button>
+      
+      {SideNav}
       <Outlet />
     </div>
   );

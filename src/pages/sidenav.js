@@ -1,11 +1,12 @@
 import React from 'react'
 import {Outlet,Link} from 'react-router-dom'
-
-function RightNav() {
+function SideNav() {
     return(
-        <div style={{zIndex:10 , backgroundColor:'#F7EAE4',width:'50%'}}>
-            <div style={{}}>
-                <nav style={{width:'100%',display:'flex', flexDirection:'column',alignItems:'center', }}>
+        <div>
+            <button>X</button>
+            <div>
+                <img src='' />
+                <nav>
                     <Link to='/' >Home</Link>
                     <Link to='/review'>The Review</Link>
                     <Link to='/about'>About</Link>
@@ -15,7 +16,6 @@ function RightNav() {
             <Outlet />
         </div>
     )
-
     
 }
-export default RightNav;
+export default SideNav;

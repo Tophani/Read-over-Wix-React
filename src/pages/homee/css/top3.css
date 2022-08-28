@@ -1,18 +1,28 @@
-.itemss{
+.items{
     padding: 10%;
     /* height: 600x; */
     display: flex;
     flex-wrap: wrap;
 }
 
-.itemss>div{
-    width:100px;
+.items>div{
     display: flex;
     flex-direction: column;
     width: 30%;
     align-items: center;
 }
 
-.itemss>div>p{
+.itemsss>div>p{
     color: black;
+}
+
+
+@media screen and (max-width:650px) {
+    
+.items>div{
+    width:90%;
+}
+.items{
+    padding: 3%;
+}
 }

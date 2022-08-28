@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './css/top5.css'
  function Top5 () {
   return (
     <div style={{width: '100%', height: 'auto', color:"white", display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
-      <div style={{width: '100%', height: '100px', display: 'flex', justifyContent: 'center', paddingLeft: '39%', paddingRight: '39%'}}>
+      <div className='t5txt' style={{width: '100%', height: '100px', display: 'flex', justifyContent: 'center', paddingLeft: '39%', paddingRight: '39%'}}>
         <h1 style={{color:'#EF5453', textAlign:"center", alignSelf: 'center'}}>So Many Books so Little Time</h1>
       </div>
       <div style={{width: '100%', height: '50px', display: 'flex', justifyContent: 'center'}}>
